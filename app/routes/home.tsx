@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 import { Highlights } from "~/highlights/highlights";
+import { Footer } from "~/footer/footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -14,6 +15,7 @@ export default function Home() {
     <div>
       <Welcome />
       <Highlights />
+      <Footer />
   </div>
 );
 }
