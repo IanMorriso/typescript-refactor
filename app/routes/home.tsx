@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-import { Highlights } from "~/highlights/highlights";
-import { Footer } from "~/footer/footer";
+import { Welcome } from "../components/welcome/welcome";
+import { Highlights } from "../components/highlights/highlights";
+import { Footer } from "../components/footer/footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
