@@ -4,7 +4,7 @@ interface HighlightCard {
     title: string;
     description: string;
     hasGradient?: boolean;
-    badge?: string;
+    skills: string[];
 }
 
 const highlightCards: HighlightCard[] = [
@@ -12,48 +12,52 @@ const highlightCards: HighlightCard[] = [
         title: "Eventilate: Breath Life Into Events",
         description: "An event management application for the Andriod platform. Created in Android Studio using Java, my team and I followed Agile Development practices to develop a user-friendly application that allows users to create, manage, and attend events. The app features real-time updates with Google Firebase, event geo-fencing, event notifications, and much more.",
         hasGradient: true,
-        badge: "New"
+        skills: ["Java", "Android Studio", "Firebase", "Agile", "Git", "Database Design"]
     },
     {
-        title: "HackED 2023 Hackathon - Member Retention",
+        title: "Member Retention - HackED 2023 Hackathon",
         description: "This project was created by our team to increase the memeber retention of financial institutions. We used machine learning to predict the likelihood of a member leaving the institution and created a user-friendly interface to display and interpert the results.",
-        badge: "New"
+        skills: ["Python", "Machine Learning", "Data Analysis", "Scikit-learn"]
     },
     {
         title: "Datathon - Predicting Alberta Wildfire Size Catagories",
         description: "A machine learning model created for a Datathon hosted by the University of Alberta Artificial Intelligence Society. This model predicts the size category of wildfires in Alberta using a government-created dataset.",
         hasGradient: true,
-      
+        skills: ["Python", "Machine Learning", "Data Science", "Pandas", "NumPy"]
     },
     {
         title: "Wordle",
-        description: "A clone of the popular puzzle game, Wordle designed and created to run in console.",
-        badge: "New"
+        description: "A clone of the popular puzzle game, Wordle designed and created in Python with additional features. Included in the repo is a seperate hint program that can be used to generate hints based on current game state and word library in use.",
+        skills: ["Python", "Data Structures", "Algorithms"]
     },
     {
         title: "RISC-V Snake",
-        description: "A clone of the popular game, Snake, designed and created to run on a RISC-V processor.",
+        description: "A modified version of the classic game, Snake, developed in the RISC-V assembly language. Writing the exception handler for timer interrupts, keyboard inputs, and scoring was quite the challenge, but very rewarding.",
         hasGradient: true,
-       
+        skills: ["Assembly", "RISC-V", "Data Structures", "Stack Management"]
     },
     {
-        title: "Custom Domains",
-        description: "Attach your own custom domain to your published projects or website on windframe",
+        title: "Pic Reads - HackED 2025 Hackathon",
+        description: "",
+        skills: ["Nuxt.js", "Vue"]
     },
 ];
 
-function Card({ title, description, hasGradient, badge }: HighlightCard) {
+function Card({ title, description, hasGradient, skills }: HighlightCard) {
     const cardContent = (
         <div className={`${hasGradient ? 'relative' : ''} overflow-hidden bg-white shadow-md rounded-xl h-full`}>
             <div className="p-9">
-                {(
-                    <div className="flex justify-center sm:justify-start">
-                        <span className="px-3 py-1.5 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
-                            {badge}
+                <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+                <div className="flex flex-wrap gap-2 justify-center sm:justify-start mt-4">
+                    {skills.map((skill, index) => (
+                        <span 
+                            key={index}
+                            className="px-2 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full"
+                        >
+                            {skill}
                         </span>
-                    </div>
-                )}
-                <h3 className="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">{title}</h3>
+                    ))}
+                </div>
                 <p className="mt-6 text-base text-gray-600">{description}</p>
             </div>
         </div>
@@ -74,7 +78,7 @@ function Card({ title, description, hasGradient, badge }: HighlightCard) {
 }
 
 export function Highlights() {
-    return (
+    return ( 
         <section className="py-12 bg-gray-900 text-gray-100 sm:py-12 lg:py-16">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="max-w-xl mx-auto text-center xl:max-w-2xl">
