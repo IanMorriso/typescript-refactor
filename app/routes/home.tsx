@@ -1,6 +1,8 @@
 import type { Route } from "./+types/home";
 import { Header } from "../components/header/header";
 import { Highlights } from "~/highlights/highlights";
+import { Skills } from "~/components/skills/skills";
+import { Education } from "~/components/education/education";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -11,9 +13,13 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <Highlights />
-  </div>
-);
+    <div className="flex">
+      <Skills />
+      <div className="flex-1 ml-64 mr-64">
+        <Header />
+        <Highlights />
+      </div>
+      <Education />
+    </div>
+  );
 }
