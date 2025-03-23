@@ -10,23 +10,25 @@ const highlightCards: HighlightCard[] = [
         title: "Eventilate: Breath Life Into Events",
         description: "An event management application for the Andriod platform. Created in Android Studio using Java, my team and I followed Agile Development practices to develop a user-friendly application that allows users to create, manage, and attend events. The app features real-time updates with Google Firebase, event geo-fencing, event notifications, and much more.",
         hasGradient: true,
-        skills: ["Java", "Android Studio", "Firebase", "Agile", "Git", "Database Design"]
+        skills: ["Java", "Android Studio", "Firebase", "Agile", "Git", "Database Design", "REST APIs", "Object-Oriented Programming"]
     },
     {
         title: "Member Retention - HackED 2023 Hackathon",
         description: "This project was created by our team to increase the memeber retention of financial institutions. We used machine learning to predict the likelihood of a member leaving the institution and created a user-friendly interface to display and interpert the results.",
-        skills: ["Python", "Machine Learning", "Data Analysis", "Scikit-learn"]
+        skills: ["Python", "Machine Learning", "Data Analysis", "Scikit-learn"],
+        hasGradient: true
     },
     {
-        title: "Datathon - Predicting Alberta Wildfire Size Catagories",
+        title: "Predicting Wildfire Size Catagories - UAAIS Datathon",
         description: "A machine learning model created for a Datathon hosted by the University of Alberta Artificial Intelligence Society. This model predicts the size category of wildfires in Alberta using a government-created dataset.",
         hasGradient: true,
-        skills: ["Python", "Machine Learning", "Data Science", "Pandas", "NumPy"]
+        skills: ["Python", "Machine Learning", "Data Science", "Pandas", "NumPy", "Pipelines", "Scikit-learn"]
     },
     {
         title: "Wordle",
         description: "A clone of the popular puzzle game, Wordle designed and created in Python with additional features. Included in the repo is a seperate hint program that can be used to generate hints based on current game state and word library in use.",
-        skills: ["Python", "Data Structures", "Algorithms"]
+        skills: ["Python", "Data Structures", "Algorithms", "Object-Oriented Programming"],
+        hasGradient: true
     },
     {
         title: "RISC-V Snake",
@@ -35,9 +37,10 @@ const highlightCards: HighlightCard[] = [
         skills: ["Assembly", "RISC-V", "Data Structures", "Stack Management"]
     },
     {
-        title: "Pic Reads - HackED 2025 Hackathon",
-        description: "",
-        skills: ["Nuxt.js", "Vue"]
+        title: "Picreads - HackED 2025 Hackathon",
+        description: "A web application that allows users to use a photo to search for books and see their ratings and reviews. The app uses the Google Books API to search for books and display them to the user.",
+        skills: ["Nuxt.js", "Vue", "TypeScript", "Tailwind CSS", "REST APIs"],
+        hasGradient: true
     },
 ];
 

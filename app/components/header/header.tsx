@@ -9,7 +9,6 @@ export function Header() {
           <div className="flex items-center">
             <img src={logo} alt="Ian Morrison" className="w-10 h-10" />
           </div>
-
           {/* Navigation Links */}
           <ul className="hidden md:flex items-center space-x-8">
             <li>
