@@ -8,6 +8,11 @@
 html,
 body {
   @apply bg-white dark:bg-gray-950;
+  background-image: url('./components/header/ian-morrison.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;

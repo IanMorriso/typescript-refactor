@@ -17,7 +17,7 @@ export default function Home() {
       <Skills />
       <div className="flex-1 ml-64 mr-64">
         <Header />
-        <Highlights />
+        <Highlights className="bg-white/90 dark:bg-gray-900/90" />
       </div>
       <Education />
     </div>
