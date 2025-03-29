@@ -1,7 +1,7 @@
 export function Projects() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-800">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-white dark:bg-gray-800 min-h-screen flex items-center">
+      <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">
           Projects
         </h2>
