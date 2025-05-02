@@ -1,3 +1,21 @@
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  link: string;
+}
+
+const PROJECTS = [
+  {
+    title: "Eventilate: Breath Life into Events",
+    description:
+      "An event management application for the Andriod platform. Created in Android Studio using Java, my team and I followed Agile Development practices to develop a user-friendly application that allows users to create, manage, and attend events. The app features real-time updates with Google Firebase, event geo-fencing, event notifications, and much more.",
+    technologies: ["Android Studio", "Java", "Firebase"],
+    link: "#",
+  },
+  
+];
+
 export function Projects() {
 
   return ( <ProjectGrid projects={PROJECTS} /> );
@@ -69,7 +87,7 @@ export function Projects() {
     </section>
   );*/
 } 
-function ProjectGrid({ projects }) {
+function ProjectGrid({ projects }: {projects: Project[] }) {
   const projectCards = projects.map((project, index) => (
     <ProjectCard key={index} project={project} />
   ));
@@ -88,7 +106,7 @@ function ProjectGrid({ projects }) {
   );
 }
 
-function ProjectCard({ project }) {
+function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden">
       <div className="p-6">
@@ -116,13 +134,3 @@ function ProjectCard({ project }) {
   );
 }
 
-const PROJECTS = [
-  {
-    title: "Eventilate: Breath Life into Events",
-    description:
-      "An event management application for the Andriod platform. Created in Android Studio using Java, my team and I followed Agile Development practices to develop a user-friendly application that allows users to create, manage, and attend events. The app features real-time updates with Google Firebase, event geo-fencing, event notifications, and much more.",
-    technologies: ["Android Studio", "Java", "Firebase"],
-    link: "#",
-  },
-  // Add more projects as needed
-];
