@@ -10,10 +10,10 @@ export function Contact() {
           Feel free to reach out!
         </p>
         <div className="flex justify-center gap-4">
-          <a href="mailto:your@email.com" className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
-            Email Me
+          <a href="https://github.com/ianmorriso" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+            Github
           </a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+          <a href="https://linkedin.com/in/ianhmorrison" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
             LinkedIn
           </a>
         </div>
