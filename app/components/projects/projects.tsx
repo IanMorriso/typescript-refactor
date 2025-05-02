@@ -1,12 +1,16 @@
 export function Projects() {
-  return (
+
+  return ( <ProjectGrid projects={PROJECTS} /> );
+    /**
     <section className="py-20 bg-white dark:bg-gray-800 min-h-screen flex items-center">
       <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">
           Projects
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project Card 1 */}
+          {/* Begin Cards }
+          projects
+            {/* Project Card 1 }
           <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden">
             <div className="p-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -36,7 +40,7 @@ export function Projects() {
               </div>
             </div>
           </div>
-          {/* Project Card 2 */}
+          {/* Project Card 2 }
           <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden">
             <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -63,5 +67,62 @@ export function Projects() {
         </div>
       </div>
     </section>
-  );
+  );*/
 } 
+function ProjectGrid({ projects }) {
+  const projectCards = projects.map((project, index) => (
+    <ProjectCard key={index} project={project} />
+  ));
+  return (
+    <section className="py-20 bg-white dark:bg-gray-800 min-h-screen flex items-center">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">
+          Projects
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Begin Cards */}
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProjectCard({ project }) {
+  return (
+    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden">
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          {project.title}
+        </h3>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.technologies.map((tech) => (
+            <span
+              key={tech}
+              className="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-600 rounded dark:bg-blue-900 dark:text-blue-200"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+        <div className="flex gap-2">
+          <a href={project.link} className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+            View Project →
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const PROJECTS = [
+  {
+    title: "Eventilate: Breath Life into Events",
+    description:
+      "An event management application for the Andriod platform. Created in Android Studio using Java, my team and I followed Agile Development practices to develop a user-friendly application that allows users to create, manage, and attend events. The app features real-time updates with Google Firebase, event geo-fencing, event notifications, and much more.",
+    technologies: ["Android Studio", "Java", "Firebase"],
+    link: "#",
+  },
+  // Add more projects as needed
+];
