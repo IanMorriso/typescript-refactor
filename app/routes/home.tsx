@@ -1,8 +1,9 @@
 import type { Route } from "./+types/home";
-import { Header } from "../components/header/header";
-import { Highlights } from "~/highlights/highlights";
-import { Skills } from "~/components/skills/skills";
-import { Education } from "~/components/education/education";
+import { Hero } from "../components/hero/hero";
+import { About } from "../components/about/about";
+import { Experience } from "../components/experience/experience";
+import { Projects } from "../components/projects/projects";
+import { Contact } from "../components/contact/contact";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -13,13 +14,12 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className="flex">
-      <Skills />
-      <div className="flex-1 ml-64 mr-64">
-        <Header />
-        <Highlights className="bg-white/90 dark:bg-gray-900/90" />
-      </div>
-      <Education />
-    </div>
+    <main>
+      <Hero />
+      <About />
+      <Projects />
+
+      <Contact />
+    </main>
   );
 }
