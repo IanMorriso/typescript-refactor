@@ -7,8 +7,8 @@ import { Contact } from "../components/contact/contact";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Ian Morrison" },
+    { name: "Personal Website", content: "Welcome! I'm Ian Morrison, a software engineer looking for opportunities to grow and learn." },
   ];
 }
 
