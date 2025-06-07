@@ -19,9 +19,9 @@ export function ScrollHeader() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                     <div className="text-xl font-bold text-gray-100">Your Logo</div>
                     <nav className="hidden md:flex space-x-8">
-                        <a href="#" className="text-gray-300 hover:text-gray-100 transition-colors duration-300">Home</a>
-                        <a href="#" className="text-gray-300 hover:text-gray-100 transition-colors duration-300">About</a>
-                        <a href="#" className="text-gray-300 hover:text-gray-100 transition-colors duration-300">Contact</a>
+                        <a href="#home" className="text-gray-300 hover:text-gray-100 transition-colors duration-300">Home</a>
+                        <a href="#about" className="text-gray-300 hover:text-gray-100 transition-colors duration-300">About</a>
+                        <a href="#contact" className="text-gray-300 hover:text-gray-100 transition-colors duration-300">Contact</a>
                     </nav>
                 </div>
             </header>
