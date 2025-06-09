@@ -8,7 +8,7 @@ import { Contact } from "../components/contact/contact";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Ian Morrison" },
-    { name: "description", content: "Welcome to the portfolio of Ian Morrison, Software Engineer" },
+    { name: "Personal Website", content: "Welcome! I'm Ian Morrison, a software engineer looking for opportunities to grow and learn." },
   ];
 }
 
@@ -18,7 +18,6 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
-
       <Contact />
     </main>
   );
