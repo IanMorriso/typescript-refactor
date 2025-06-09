@@ -59,6 +59,7 @@ export function ScrollSidebars() {
             <div className={`fixed left-0 top-1/2 -translate-y-1/2 w-16 transition-all duration-700 ease-in-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`}>
                 <div className="bg-gray-800 bg-opacity-90 backdrop-blur-sm shadow-lg rounded-r-lg p-4">
                     <div className="space-y-4">
+                        {/*}
                         {[1, 2, 3].map((index) => (
                             <div key={index}>
                             <div
@@ -75,7 +76,7 @@ export function ScrollSidebars() {
                                 </div>
                             )}
                             </div>
-                        ))}
+                        ))}*/}
 
                         <div className="w-8 h-8 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors duration-300"></div>
                         <div className="w-8 h-8 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors duration-300"></div>
