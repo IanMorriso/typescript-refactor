@@ -3,11 +3,15 @@ import logo from "./header/ian-morrison.svg"
 
 export function ScrollHeader() {
     const [isVisible, setIsVisible] = useState(false);
+    const [rotation, setRotation] = useState(0);
+    const rotationSpeed = 0.1;
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             setIsVisible(scrollPosition > 100);
+
+            setRotation(scrollPosition * rotationSpeed);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -21,7 +25,16 @@ export function ScrollHeader() {
                     <div className="text-xl font-bold text-gray-100">Your Logo</div>
                         {/* Logo */}
                         <div className="flex items-center">
-                            <img src={logo} alt="Ian Morrison" className="w-10 h-10" />
+                            <img 
+                                src={logo} 
+                                alt="Ian Morrison" 
+                                className="w-10 h-10" 
+                                style={{
+                                    transform: `rotate(${rotation}deg)`,
+                                    transition: 'transform 0.1s linear',
+
+                                }}
+                            />
                         </div>
                     {/* Nav Links */}
                     <nav className="hidden md:flex space-x-8">
