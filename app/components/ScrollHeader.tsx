@@ -18,11 +18,11 @@ export function ScrollHeader() {
         <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-850 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             <header className="bg-gray-800 bg-opacity-90 backdrop-blur-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                    <div className="text-xl font-bold text-gray-100">Your Logo</div>
-                        {/* Logo */}
-                        <div className="flex items-center">
+                    <div className="text-xl font-bold text-gray-100"><img src={logo} alt="Ian Morrison" className="w-10 h-10" /></div>
+                    {/* Logo 
+                        <div className="flex items-center justify-left">
                             <img src={logo} alt="Ian Morrison" className="w-10 h-10" />
-                        </div>
+                        </div> /*}
                     {/* Nav Links */}
                     <nav className="hidden md:flex space-x-8">
                         <a href="#home" className="text-gray-300 hover:text-gray-100 transition-colors duration-300">Home</a>

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface Project {
   title: string;
   description: string;
@@ -7,7 +9,7 @@ interface Project {
 
 const PROJECTS = [
   {
-    title: "Card Collection Management System",
+    title: "TCG Collection Manager",
     description: "This is a Trading Card Collection Management System that I'm creating with Typescript. Users can upload card data to begin tracking their collection in terms of individual card prices, current market values, collection value, and more. This project is a work in progress, but I am excited to continue developing it!",
     technologies: ["TypeScript", "React", "Node.js", "Express", "MongoDB", "APIs"],
     link: "https://github.com/IanMorriso/collection-manager",
@@ -87,9 +89,15 @@ function ProjectGrid({ projects }: {projects: Project[] }) {
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  // Estimate if text will overflow 3 lines (roughly 120-140 chars depending on content)
+  const estimatedMaxChars = 140;
+  const shouldShowReadMore = project.description.length > estimatedMaxChars;
+
   return (
-    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden">
-      <div className="p-6">
+    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden h-full flex flex-col">
+      <div className="p-6 flex flex-col h-full">
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
           {project.title}
         </h3>
@@ -103,8 +111,26 @@ function ProjectCard({ project }: { project: Project }) {
             </span>
           ))}
         </div>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
-        <div className="flex gap-2">
+        <div className="flex-grow mb-4">
+          <p 
+            className={`text-gray-600 dark:text-gray-300 ${
+              !isExpanded && shouldShowReadMore 
+                ? 'line-clamp-3' 
+                : ''
+            }`}
+          >
+            {project.description}
+          </p>
+          {shouldShowReadMore && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 text-sm mt-2 font-medium"
+            >
+              {isExpanded ? "Show Less" : "Read More"}
+            </button>
+          )}
+        </div>
+        <div className="flex gap-2 mt-auto">
             <a
             href={project.link}
             target="_blank"
