@@ -26,7 +26,7 @@ const PROJECTS = [
     title: "Eventilate: Breath Life into Events",
     description:
       "An event management application for the Andriod platform. Created in Android Studio using Java, my team and I followed Agile Development practices to develop a user-friendly application that allows users to create, manage, and attend events. The app features real-time updates with Google Firebase, event geo-fencing, event notifications, and much more.",
-    technologies: ["Android Studio", "Java", "Firebase"],
+    technologies: ["Android Studio", "Java", "Google Cloud Platform"],
     link: "https://github.com/404-Founders-Not-Found/Syntax-Terror",
   },
 
